@@ -1,29 +1,14 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import bpy
-from bpy.props import (FloatProperty,
-                        BoolProperty,
-                        EnumProperty,
-                        StringProperty,
-                        IntProperty,
-                        PointerProperty)
+from bpy.props import FloatProperty
 
 def get_addon_prefs():
-    """Function to read current addon preferences properties
-    access with : get_addon_prefs().super_special_option
-    """
-    # import os 
-    # addon_name = os.path.splitext(__name__)[0]
-    # preferences = bpy.context.preferences
-    # return preferences.addons[addon_name].preferences
     return bpy.context.preferences.addons[__package__].preferences
 
-
 class extend_shortcut_Prefs(bpy.types.AddonPreferences):
-    bl_idname = __name__.split('.')[0] # or with: os.path.splitext(__name__)[0]
+    bl_idname = __package__
 
-    # mode : StringProperty(name='Mode', default='',
-    #                       description='Some text can change tools behaviors')
     add_brush_value : FloatProperty(name='Add Brush Value', default=0.02,
                           description='value set when swapping to Add brush')
     
@@ -42,8 +27,6 @@ class extend_shortcut_Prefs(bpy.types.AddonPreferences):
         box.prop(self, "add_brush_value")
         box.prop(self, "mix_brush_value")
 
-
-### --- REGISTER ---
 
 classes=(
 extend_shortcut_Prefs,
