@@ -76,7 +76,7 @@ addon_keymaps = []
 def register_keymap():
     addon = bpy.context.window_manager.keyconfigs.addon
     
-    km = addon.keymaps.new(name = "Weight Paint", space_type = "EMPTY")
+    km = addon.keymaps.new(name = "Weight Paint", space_type="EMPTY")
     
     #  X
     kmi = km.keymap_items.new('object.swap_paint_value', type='X', value='PRESS')
