@@ -1,6 +1,9 @@
 # Extend Shortcuts
 
-A little addon to add some shortcuts in blender
+A little addon to add some specific shortcuts in blender (only weight paint mode for now)
+
+[**Download Latest**](https://github.com/Pullusb/extend_shortcuts/archive/refs/heads/main.zip)
+
 
 Super tiny for now, just a shortcut to swap weight paint values
 
