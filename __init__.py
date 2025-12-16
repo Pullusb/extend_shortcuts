@@ -4,7 +4,7 @@ bl_info = {
     "name": "Extend Shortcuts",
     "description": "Additional keymap entry for practical use",
     "author": "Samuel Bernou",
-    "version": (0, 1, 0),
+    "version": (1, 0, 0),
     "blender": (4, 0, 0),
     "location": "View3D",
     "warning": "",
